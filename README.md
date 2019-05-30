@@ -1,8 +1,9 @@
 # Logpoint Manager
-This extension provides ability to enable your logpoints via command palette.
+This extension provides ability to manage your logpoints via command palette.
 
 ## Usage
-- enable all logpoints
-- enable non-break logpoints
+- Enable Only Non-break Logpoints -- (This will also other break-breakpoints)
+- Enable Only Logpoints -- (This will also disable other breakpoints)
+- Remove All Breakpoints Except Logpoints -- (The remain breakpoints will only have logpoints)
 
-![Logpoint Enable Command](./resources/debug-logpoints-commands.png 'Logpoint Enable Command')
+![Logpoint Manager Command](./resources/debug-logpoints-commands.png 'Logpoint Manager Command')
