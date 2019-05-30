@@ -1,19 +1,21 @@
 import * as vscode from 'vscode';
 import { Commands } from './enums';
-import { enableNonBreakLogpoints, enableAllLogpoints } from './commands';
+import { enableOnlyNonBreakLogpoints, enableOnlyLogpoints, removeAllBreakpointsExceptLogpoints } from './commands';
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log('Extension "logpoint-enable" is active.');
+	console.log('Extension `Logpoint Manager` is active.');
 
 	registerCommands(context);
 }
 
 function registerCommands(context: vscode.ExtensionContext) {
-	let doEnableNonBreakLogpoints =vscode.commands.registerCommand(Commands.enableNonBreakLogpoints, enableNonBreakLogpoints);
-	let doEnableAllLogpoints = vscode.commands.registerCommand(Commands.enableAllLogpoints, enableAllLogpoints);
+	let doEnableOnlyNonBreakpointLogpoints = vscode.commands.registerCommand(Commands.enableOnlyNonBreakpointLogpoints, enableOnlyNonBreakLogpoints);
+	let doEnableOnlyLogpoints = vscode.commands.registerCommand(Commands.enableOnlyLogpoints, enableOnlyLogpoints);
+	let doRemoveAllBreakBreakpointsExceptLogpoints = vscode.commands.registerCommand(Commands.removeAllBreakpointsExceptLogpoints, removeAllBreakpointsExceptLogpoints);
 
-	context.subscriptions.push(doEnableNonBreakLogpoints);
-	context.subscriptions.push(doEnableAllLogpoints);
+	context.subscriptions.push(doEnableOnlyNonBreakpointLogpoints);
+	context.subscriptions.push(doEnableOnlyLogpoints);
+	context.subscriptions.push(doRemoveAllBreakBreakpointsExceptLogpoints);
 }
 
 export function deactivate() {}

@@ -1,4 +1,4 @@
-# Logpoint Enable
+# Logpoint Manager
 This extension provides ability to enable your logpoints via command palette.
 
 ## Usage

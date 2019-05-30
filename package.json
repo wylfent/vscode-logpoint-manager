@@ -1,14 +1,14 @@
 {
-	"name": "logpoint-enable",
-	"displayName": "Logpoint Enable",
-	"description": "Extension that will help you toggle breakpoint by breakpoint type.",
+	"name": "logpoint-manager",
+	"displayName": "Logpoint Manager",
+	"description": "Extension that will help you to manage your logpoints.",
 	"publisher": "wylfent",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/wylfent/vscode-logpoint-manager.git"
 	},
 	"icon": "resources/logpoint-icon.png",
-	"version": "0.0.3",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.34.0"
 	},
@@ -22,12 +22,16 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "logpoint-enable.enable-nonbreak-logpoints",
-				"title": "Debug-Logpoints: Enable Non-break Logpoints"
+				"command": "logpoint-manager.enable-only-non-breakpoint-logpoints",
+				"title": "Debug-Logpoints: Enable Only Non-break Logpoints"
 			},
 			{
-				"command": "logpoint-enable.enable-all-logpoints",
-				"title": "Debug-Logpoints: Enable All Logpoints"
+				"command": "logpoint-manager.enable-only-logpoints",
+				"title": "Debug-Logpoints: Enable Only Logpoints"
+			},
+			{
+				"command": "logpoint-manager.remove-all-breakpoints-except-logpoints",
+				"title": "Debug-Logpoints: Remove All Breakpoints Except Logpoints"
 			}
 		]
 	},
