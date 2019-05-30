@@ -1,4 +1,5 @@
 export enum Commands {
-    enableNonBreakLogpoints = 'logpoint-enable.enable-nonbreak-logpoints',
-    enableAllLogpoints = 'logpoint-enable.enable-all-logpoints',
+    enableOnlyNonBreakpointLogpoints = 'logpoint-manager.enable-only-non-breakpoint-logpoints',
+    enableOnlyLogpoints = 'logpoint-manager.enable-only-logpoints',
+    removeAllBreakpointsExceptLogpoints = 'logpoint-manager.remove-all-breakpoints-except-logpoints'
 }
